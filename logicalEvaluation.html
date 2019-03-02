@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>logical</title>
+</head>
+<body>
+	<h2>Id and ship</h2>
+	<input type="text" placeholder="Enter b,c,d,F" id="demo1" name="value">
+	<button onclick="myfun1()">click me</button>
+	<p id="out1"></p>
+	<p id="out2"></p>
+	<p id="out3"></p>
+	<p id="out4"></p>
+	<h2>Gross salary</h2>
+	<input type="number" placeholder="Enter basic" id="demo2">
+	
+	<button onclick="myfun2()">submit</button>
+	<p id="out5"></p>
+<script type="text/javascript">
+	function myfun1(){
+		var x=document.getElementById("demo1").value;
+		if (x=='b' || x=='B') {
+			document.getElementById("out1").innerHTML="Battleship";
+		}
+		else if(x=="C" || x=="c") {
+			document.getElementById("out2").innerHTML="Cruiser";
+		}
+		else if (x=="D" ||x=="d") {
+			document.getElementById("out3").innerHTML="Destroyer";
+		}
+		else if(x=="F" ||x=="f"){
+			document.getElementById("out4").innerHTML="Frigate";
+		}
+		else{
+			return 0;
+		}
+		}
+
+		function myfun2(){
+			var basic=document.getElementById("demo2").value;
+			
+			var hra=(basic/100)*10;
+			var Da=(basic/100)*90;
+			var Gross= Number(basic)+Number(hra)+Number(Da);
+			document.getElementById("out5").innerHTML= Gross;
+		}
+		
+	
+</script>
+
+</body>
+</html>

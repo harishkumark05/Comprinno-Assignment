@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Problem Solving</title>
+	<h2>Problem Statement</h2>
+	<input type="number" id="demo1" placeholder="Enter the value of a"><br>
+	<input type="number" id="demo2" placeholder="Enter the value of b"><br>
+	<button onclick="myfun1()">clickme</button>
+	<p id="out1"></p>
+</head>
+<body>
+<script type="text/javascript">
+	function myfun1(a,b) {
+		var a=document.getElementById("demo1").value;
+		var b=document.getElementById("demo2").value; 
+    var result = 0,
+        x = 1;	
+    while (a > 0 && b > 0) {
+        result += x * ((a + b) % 10);
+        a = Math.floor(a / 10);
+        b = Math.floor(b / 10);
+        x*= 10;
+    }
+    document.getElementById("out1").innerHTML=result;
+}
+</script>
+</body>
+</html>
